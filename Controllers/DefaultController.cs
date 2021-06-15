@@ -11,7 +11,7 @@ namespace SGCS_Bumer_Solutions.Controllers
         // GET: Default
         public ActionResult Index()
         {
-            return View();
+            return Redirect("~/Usuario/Index");
         }
     }
 }
