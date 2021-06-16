@@ -156,6 +156,66 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
             return usuario;
         }
 
+        public void Eliminar()
+        {
+            var usuario = ObtenerUsuario(ID_USUARIO);
+            this.ID_USUARIO = usuario.ID_USUARIO;
+            this.NOMBRE = usuario.NOMBRE;
+            this.APELLIDO = usuario.APELLIDO;
+            this.FECHA_CREACION = usuario.FECHA_CREACION;
+            this.CODIGO = usuario.CODIGO;
+            this.TELEFONO = usuario.TELEFONO;
+            this.EMAIL = usuario.EMAIL;
+            this.PASSWORD = usuario.PASSWORD;
+            this.ID_TIPOUSUARIO = usuario.ID_TIPOUSUARIO;
+            this.ESTADO = false;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_USUARIO > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+        public void Habilitar()
+        {
+            var usuario = ObtenerUsuario(ID_USUARIO);
+            this.ID_USUARIO = usuario.ID_USUARIO;
+            this.NOMBRE = usuario.NOMBRE;
+            this.APELLIDO = usuario.APELLIDO;
+            this.FECHA_CREACION = usuario.FECHA_CREACION;
+            this.CODIGO = usuario.CODIGO;
+            this.TELEFONO = usuario.TELEFONO;
+            this.EMAIL = usuario.EMAIL;
+            this.PASSWORD = usuario.PASSWORD;
+            this.ID_TIPOUSUARIO = usuario.ID_TIPOUSUARIO;
+            this.ESTADO = true;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_USUARIO > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
 
     }
 }

@@ -38,5 +38,24 @@ namespace SGCS_Bumer_Solutions.Controllers
                 return View("~/Usuario/Usuario");
             }
         }
+
+        public ActionResult Edituser(int id = 0)
+        {
+            return View(id == 0 ? new USUARIO() : usuario.ObtenerUsuario(id));
+        }
+
+        public ActionResult Eliminar(int id)
+        {
+            usuario.ID_USUARIO = id;
+            usuario.Eliminar();
+            return Redirect("~/Usuario/Usuario");
+        }
+
+        public ActionResult Habilitar(int id)
+        {
+            usuario.ID_USUARIO = id;
+            usuario.Habilitar();
+            return Redirect("~/Usuario/Usuario");
+        }
     }
 }

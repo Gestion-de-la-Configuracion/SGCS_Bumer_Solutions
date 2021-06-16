@@ -39,12 +39,12 @@
                         if (user.ESTADO == true)
                         {
                             <tr>
-                                <td>@user.NOMBRE @user.APELLIDO</td>
-                                <td>@user.TELEFONO</td>
-                                <td>@user.CODIGO</td>
-                                <td>@user.FECHA_CREACION</td>
-                                <td>@user.EMAIL</td>
-                                <td align="center" class="actions">
+                                <td style="vertical-align: middle;">@user.NOMBRE @user.APELLIDO</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">@user.TELEFONO</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">@user.CODIGO</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">@user.FECHA_CREACION</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">@user.EMAIL</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;" align="center" class="actions">
 
                                     <div class="input-group-btn btn-rounded">
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans" style="overflow: hidden; position: relative;">Acciones</button>
@@ -55,20 +55,20 @@
                                         </ul>
                                     </div>
 
-                                </td>
+                                </td style="vertical-align: middle;">
                             </tr>
                         }
 
 
                         else if (user.ESTADO == false)
                         {
-                            <tr>
-                                <td class="text-danger"><i class="ti ti-alert"></i> @user.NOMBRE @user.APELLIDO</td>
-                                <td>@user.TELEFONO</td>
-                                <td>@user.CODIGO</td>
-                                <td>@user.FECHA_CREACION</td>
-                                <td>@user.EMAIL años</td>
-                                <td align="center" class="actions">
+                            <tr class="d-flex align-items-center">
+                                <td style="vertical-align: middle;" class="text-danger"><i class="ti ti-alert"></i> @user.NOMBRE @user.APELLIDO</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">@user.TELEFONO</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">@user.CODIGO</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">@user.FECHA_CREACION</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">@user.EMAIL</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;" align="center" class="actions">
 
                                     <div class="input-group-btn btn-rounded">
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans" style="overflow: hidden; position: relative;">Acciones</button>
@@ -79,7 +79,7 @@
                                         </ul>
                                     </div>
 
-                                </td>
+                                </td style="vertical-align: middle;">
                             </tr>
                         }
                     }

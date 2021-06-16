@@ -40,5 +40,33 @@ namespace SGCS_Bumer_Solutions.Controllers
                 return View("~/Proyecto/Index");
             }
         }
+
+        public ActionResult EditPro(int id = 0)
+        {
+            ViewBag.Usuario = usuario.ListarTodo();
+            ViewBag.Metodologia = metodologia.ListarTodo();
+            return View(id == 0 ? new PROYECTO() : proyecto.ObtenerProyecto(id));
+        }
+
+        public ActionResult Eliminar(int id)
+        {
+            proyecto.ID_PROYECYO = id;
+            proyecto.Eliminar();
+            return Redirect("~/Proyecto/Index");
+        }
+
+        public ActionResult Habilitar(int id)
+        {
+            proyecto.ID_PROYECYO = id;
+            proyecto.Habilitar();
+            return Redirect("~/Proyecto/Index");
+        }
+
+        public ActionResult Revision(int id)
+        {
+            proyecto.ID_PROYECYO = id;
+            proyecto.Revision();
+            return Redirect("~/Proyecto/Index");
+        }
     }
 }

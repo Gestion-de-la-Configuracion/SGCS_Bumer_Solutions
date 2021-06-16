@@ -73,5 +73,72 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
                 throw;
             }
         }
+
+        public METODOLOGIA ObtenerMetodologia(int id)
+        {
+            var metodologia = new METODOLOGIA();
+
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    metodologia = db.METODOLOGIA
+                        .Where(x => x.ID_METODOLOGIA == id)
+                        .SingleOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return metodologia;
+        }
+
+        public void Eliminar()
+        {
+            var metodologia = ObtenerMetodologia(ID_METODOLOGIA);
+            this.ID_METODOLOGIA = metodologia.ID_METODOLOGIA;
+            this.DESCRIPCION = metodologia.DESCRIPCION;
+            this.ESTADO = true;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_METODOLOGIA > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+        public void Habilitar()
+        {
+            var metodologia = ObtenerMetodologia(ID_METODOLOGIA);
+            this.ID_METODOLOGIA = metodologia.ID_METODOLOGIA;
+            this.DESCRIPCION = metodologia.DESCRIPCION;
+            this.ESTADO = true;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_METODOLOGIA > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
     }
 }

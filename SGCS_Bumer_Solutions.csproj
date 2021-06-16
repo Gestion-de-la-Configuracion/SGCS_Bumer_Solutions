@@ -1217,6 +1217,10 @@
     <Content Include="Source\plugins\select2\src\scss\_single.scss" />
     <Content Include="Source\plugins\toastr\toastr.js.map" />
     <Content Include="Views\Calendario\Index.cshtml" />
+    <Content Include="Views\Usuario\Edituser.cshtml" />
+    <Content Include="Views\Metodologia\EditMet.cshtml" />
+    <Content Include="Views\Etapa\EditEta.cshtml" />
+    <Content Include="Views\Proyecto\EditPro.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

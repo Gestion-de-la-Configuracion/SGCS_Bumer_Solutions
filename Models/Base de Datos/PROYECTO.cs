@@ -86,5 +86,118 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
                 throw;
             }
         }
+
+        public PROYECTO ObtenerProyecto(int id)
+        {
+            var proyecto = new PROYECTO();
+
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    proyecto = db.PROYECTO
+                        .Where(x => x.ID_PROYECYO == id)
+                        .SingleOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return proyecto;
+        }
+
+        public void Eliminar()
+        {
+            var proyecto = ObtenerProyecto(ID_PROYECYO);
+            this.ID_PROYECYO = proyecto.ID_PROYECYO;
+            this.NOMBRE = proyecto.NOMBRE;
+            this.DESCRIPCION = proyecto.DESCRIPCION;
+            this.ID_CLIENTE = proyecto.ID_CLIENTE;
+            this.ID_METODOLOGIA = proyecto.ID_METODOLOGIA;
+            this.ESTADO = proyecto.ESTADO;
+            this.ID_JEFEPROYECTO = proyecto.ID_JEFEPROYECTO;
+            this.FECHA_INICIO = proyecto.FECHA_INICIO;
+            this.FECHA_FIN = proyecto.FECHA_FIN;
+            this.ESTADO = false;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_METODOLOGIA > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+        public void Habilitar()
+        {
+            var proyecto = ObtenerProyecto(ID_PROYECYO);
+            this.ID_PROYECYO = proyecto.ID_PROYECYO;
+            this.NOMBRE = proyecto.NOMBRE;
+            this.DESCRIPCION = proyecto.DESCRIPCION;
+            this.ID_CLIENTE = proyecto.ID_CLIENTE;
+            this.ID_METODOLOGIA = proyecto.ID_METODOLOGIA;
+            this.ESTADO = proyecto.ESTADO;
+            this.ID_JEFEPROYECTO = proyecto.ID_JEFEPROYECTO;
+            this.FECHA_INICIO = proyecto.FECHA_INICIO;
+            this.FECHA_FIN = proyecto.FECHA_FIN;
+            this.ESTADO = true;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_METODOLOGIA > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+        public void Revision()
+        {
+            var proyecto = ObtenerProyecto(ID_PROYECYO);
+            this.ID_PROYECYO = proyecto.ID_PROYECYO;
+            this.NOMBRE = proyecto.NOMBRE;
+            this.DESCRIPCION = proyecto.DESCRIPCION;
+            this.ID_CLIENTE = proyecto.ID_CLIENTE;
+            this.ID_METODOLOGIA = proyecto.ID_METODOLOGIA;
+            this.ESTADO = proyecto.ESTADO;
+            this.ID_JEFEPROYECTO = proyecto.ID_JEFEPROYECTO;
+            this.FECHA_INICIO = proyecto.FECHA_INICIO;
+            this.FECHA_FIN = proyecto.FECHA_FIN;
+            this.ESTADO = null;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_METODOLOGIA > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+
     }
 }

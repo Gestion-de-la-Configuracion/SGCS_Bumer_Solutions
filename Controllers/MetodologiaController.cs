@@ -31,5 +31,24 @@ namespace SGCS_Bumer_Solutions.Controllers
                 return View("~/Metodologia/Index");
             }
         }
+
+        public ActionResult EditMet(int id = 0)
+        {
+            return View(id == 0 ? new METODOLOGIA() : metodologia.ObtenerMetodologia(id));
+        }
+
+        public ActionResult Eliminar(int id)
+        {
+            metodologia.ID_METODOLOGIA = id;
+            metodologia.Eliminar();
+            return Redirect("~/Metodologia/Index");
+        }
+
+        public ActionResult Habilitar(int id)
+        {
+            metodologia.ID_METODOLOGIA = id;
+            metodologia.Habilitar();
+            return Redirect("~/Metodologia/Index");
+        }
     }
 }

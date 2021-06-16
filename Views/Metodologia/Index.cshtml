@@ -35,31 +35,31 @@
                         if (metodo.ESTADO == true)
                         {
                             <tr>
-                                <td>@metodo.ID_METODOLOGIA</td>
-                                <td>Metodologia @metodo.DESCRIPCION</td>
+                                <td style="vertical-align: middle;">@metodo.ID_METODOLOGIA</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">Metodologia @metodo.DESCRIPCION</td style="vertical-align: middle;">
 
                                 @if (metodo.ESTADO == true)
                                 {
-                                    <td>Activo</td>
+                                    <td style="vertical-align: middle;">Activo</td style="vertical-align: middle;">
                                 }
                                 else
                                 {
-                                    <td>Inactivo</td>
+                                    <td style="vertical-align: middle;">Inactivo</td style="vertical-align: middle;">
                                 }
 
 
-                                <td align="center" class="actions">
+                                <td style="vertical-align: middle;" align="center" class="actions">
 
                                     <div class="input-group-btn btn-rounded">
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans" style="overflow: hidden; position: relative;">Acciones</button>
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans dropdown-toggle" data-toggle="dropdown" style="overflow: hidden; position: relative;"><span class="caret"></span></button>
                                         <ul class="dropdown-menu">
-                                            <li><a id="editar" href="~/Metodologia/Edituser/@metodo.ID_METODOLOGIA"><i class="fa fa-pencil text-warning"></i> Editar</a></li>
+                                            <li><a id="editar" href="~/Metodologia/EditMet/@metodo.ID_METODOLOGIA"><i class="fa fa-pencil text-warning"></i> Editar</a></li>
                                             <li><a href="~/Metodologia/Eliminar/@metodo.ID_METODOLOGIA" onclick="return confirm('¿Esta seguro de eliminarla?')"><i class="fa fa-trash-o text-danger"></i> Eliminar</a></li>
                                         </ul>
                                     </div>
 
-                                </td>
+                                </td style="vertical-align: middle;">
                             </tr>
                         }
 
@@ -67,20 +67,20 @@
                         else if (metodo.ESTADO == false)
                         {
                             <tr>
-                                <td>@metodo.ID_METODOLOGIA</td>
-                                <td>Metodologia @metodo.DESCRIPCION</td>
+                                <td style="vertical-align: middle;" class="text-danger"><i class="ti ti-alert"></i>@metodo.ID_METODOLOGIA</td style="vertical-align: middle;">
+                                <td style="vertical-align: middle;">Metodologia @metodo.DESCRIPCION</td style="vertical-align: middle;">
 
                                 @if (metodo.ESTADO == true)
                                 {
-                                    <td>Activo</td>
+                                    <td style="vertical-align: middle;">Activo</td style="vertical-align: middle;">
                                 }
                                 else
                                 {
-                                    <td>Inactivo</td>
+                                    <td style="vertical-align: middle;">Inactivo</td style="vertical-align: middle;">
                                 }
 
 
-                                <td align="center" class="actions">
+                                <td style="vertical-align: middle;" align="center" class="actions">
 
                                     <div class="input-group-btn btn-rounded">
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans" style="overflow: hidden; position: relative;">Acciones</button>
@@ -91,7 +91,7 @@
                                         </ul>
                                     </div>
 
-                                </td>
+                                </td style="vertical-align: middle;">
                             </tr>
                         }
                     }

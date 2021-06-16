@@ -33,5 +33,25 @@ namespace SGCS_Bumer_Solutions.Controllers
                 return View("~/Etapa/Index");
             }
         }
+
+        public ActionResult EditEta(int id = 0)
+        {
+            ViewBag.Metodologia = metodologia.ListarTodo();
+            return View(id == 0 ? new ETAPA() : etapa.ObtenerEtapa(id));
+        }
+
+        public ActionResult Eliminar(int id)
+        {
+            etapa.ID_ETAPA = id;
+            etapa.Eliminar();
+            return Redirect("~/Etapa/Index");
+        }
+
+        public ActionResult Habilitar(int id)
+        {
+            etapa.ID_ETAPA = id;
+            etapa.Habilitar();
+            return Redirect("~/Etapa/Index");
+        }
     }
 }

@@ -78,5 +78,74 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
                 throw;
             }
         }
+
+        public ETAPA ObtenerEtapa(int id)
+        {
+            var etapa = new ETAPA();
+
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    etapa = db.ETAPA
+                        .Where(x => x.ID_ETAPA == id)
+                        .SingleOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return etapa;
+        }
+
+        public void Eliminar()
+        {
+            var etapa = ObtenerEtapa(ID_ETAPA);
+            this.ID_ETAPA = etapa.ID_ETAPA;
+            this.NOMBRE = etapa.NOMBRE;
+            this.ID_METODOLOGIA = etapa.ID_METODOLOGIA;
+            this.ESTADO = false;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_METODOLOGIA > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+        public void Habilitar()
+        {
+            var etapa = ObtenerEtapa(ID_ETAPA);
+            this.ID_ETAPA = etapa.ID_ETAPA;
+            this.NOMBRE = etapa.NOMBRE;
+            this.ID_METODOLOGIA = etapa.ID_METODOLOGIA;
+            this.ESTADO = true;
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_METODOLOGIA > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
     }
 }
