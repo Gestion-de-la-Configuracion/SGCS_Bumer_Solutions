@@ -75,7 +75,6 @@ D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\es\System.Web.Webpag
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\es\System.Web.Webpages.Razor.resources.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\es\System.Web.Helpers.resources.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\es\System.Web.Mvc.resources.dll
-D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.csprojAssemblyReference.cache
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.csproj.CoreCompileInputs.cache
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.csproj.CopyComplete
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.dll

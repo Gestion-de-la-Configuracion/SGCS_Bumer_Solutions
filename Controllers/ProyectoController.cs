@@ -23,10 +23,15 @@ namespace SGCS_Bumer_Solutions.Controllers
             return View(proyecto.ListarTodo());
         }
 
-        public ActionResult Guardar(PROYECTO proyecto)
+        public ActionResult Guardar(PROYECTO proyecto, string daterange)
         {
-            if (ModelState.IsValid)
+            if (!proyecto.DESCRIPCION.Equals("") && !daterange.Equals(""))
             {
+                //split de la fecha
+                string[] fechas = daterange.Split('-');
+                proyecto.FECHA_INICIO = Convert.ToDateTime(fechas[0]);
+                proyecto.FECHA_FIN = Convert.ToDateTime(fechas[1]);
+
                 proyecto.Guardar();
                 return Redirect("~/Proyecto/Index");
             }
