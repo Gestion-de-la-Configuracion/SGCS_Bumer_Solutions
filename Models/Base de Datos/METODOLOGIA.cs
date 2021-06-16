@@ -4,7 +4,9 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("METODOLOGIA")]
     public partial class METODOLOGIA
@@ -29,5 +31,47 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROYECTO> PROYECTO { get; set; }
+
+        public List<METODOLOGIA> ListarTodo()
+        {
+            var metodologia = new List<METODOLOGIA>();
+
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    metodologia = db.METODOLOGIA.ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+            return metodologia;
+        }
+
+        public void Guardar()
+        {
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    if (this.ID_METODOLOGIA > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        db.Entry(this).State = EntityState.Added;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
     }
 }

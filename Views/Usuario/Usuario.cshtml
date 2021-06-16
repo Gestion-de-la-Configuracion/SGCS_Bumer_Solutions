@@ -50,8 +50,8 @@
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans" style="overflow: hidden; position: relative;">Acciones</button>
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans dropdown-toggle" data-toggle="dropdown" style="overflow: hidden; position: relative;"><span class="caret"></span></button>
                                         <ul class="dropdown-menu">
-                                            <li><a id="editar" href="~/Administrador/Edituser/@user.ID_USUARIO"><i class="fa fa-pencil text-warning"></i> Editar</a></li>
-                                            <li><a href="~/Administrador/Eliminar/@user.ID_USUARIO" onclick="return confirm('¿Esta seguro de eliminar a @(user.NOMBRE) @(user.APELLIDO)?')"><i class="fa fa-trash-o text-danger"></i> Eliminar</a></li>
+                                            <li><a id="editar" href="~/Usuario/Edituser/@user.ID_USUARIO"><i class="fa fa-pencil text-warning"></i> Editar</a></li>
+                                            <li><a href="~/Usuario/Eliminar/@user.ID_USUARIO" onclick="return confirm('¿Esta seguro de eliminar a @(user.NOMBRE) @(user.APELLIDO)?')"><i class="fa fa-trash-o text-danger"></i> Eliminar</a></li>
                                         </ul>
                                     </div>
 
@@ -74,8 +74,8 @@
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans" style="overflow: hidden; position: relative;">Acciones</button>
                                         <button type="button" class="btn btn-rounded waves-effect waves-light btn-success btn-trans dropdown-toggle" data-toggle="dropdown" style="overflow: hidden; position: relative;"><span class="caret"></span></button>
                                         <ul class="dropdown-menu">
-                                            <li><a id="editar" href="~/Administrador/Edituser/@user.ID_USUARIO"><i class="fa fa-pencil text-warning"></i> Editar</a></li>
-                                            <li><a href="~/Administrador/Habilitar/@user.ID_USUARIO" onclick="return confirm('¿Esta seguro de habilitar a @(user.NOMBRE) @(user.APELLIDO)?')"><i class="fa fa-check text-success"></i> Habilitar</a></li>
+                                            <li><a id="editar" href="~/Usuario/Edituser/@user.ID_USUARIO"><i class="fa fa-pencil text-warning"></i> Editar</a></li>
+                                            <li><a href="~/Usuario/Habilitar/@user.ID_USUARIO" onclick="return confirm('¿Esta seguro de habilitar a @(user.NOMBRE) @(user.APELLIDO)?')"><i class="fa fa-check text-success"></i> Habilitar</a></li>
                                         </ul>
                                     </div>
 
@@ -120,13 +120,13 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 @Html.Label("Codigo", new { @class = "control-label" })
-                                <input type="text" name="CODIGO" id="CODIGO" class="form-control" placeholder="Ingrese la edad">
+                                <input type="text" name="CODIGO" id="CODIGO" class="form-control" placeholder="Ingrese el codigo">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 @Html.Label("Telefono", new { @class = "control-label" })
-                                <input type="text" name="TELEFONO" id="TELEFONO" class="form-control" placeholder="Ingrese la estatura">
+                                <input type="text" name="TELEFONO" id="TELEFONO" class="form-control" placeholder="Ingrese el telefono">
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -174,4 +174,4 @@
 
         </div>
     </div>
-</div><!-- /.modal -->
+</div>

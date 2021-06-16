@@ -7,26 +7,28 @@ using System.Web.Mvc;
 
 namespace SGCS_Bumer_Solutions.Controllers
 {
-    public class MetodologiaController : Controller
+    public class EtapaController : Controller
     {
+        ETAPA etapa = new ETAPA();
         METODOLOGIA metodologia = new METODOLOGIA();
 
-        // GET: Metodologia
+        // GET: Etapa
         public ActionResult Index()
         {
-            return View(metodologia.ListarTodo());
+            ViewBag.Metodologia = metodologia.ListarTodo();
+            return View(etapa.ListarTodo());
         }
 
-        public ActionResult Guardar(METODOLOGIA metodologia)
+        public ActionResult Guardar(ETAPA etapa)
         {
             if (ModelState.IsValid)
             {
-                metodologia.Guardar();
-                return Redirect("~/Metodologia/Index");
+                etapa.Guardar();
+                return Redirect("~/Etapa/Index");
             }
             else
             {
-                return View("~/Metodologia/Index");
+                return View("~/Etapa/Index");
             }
         }
     }

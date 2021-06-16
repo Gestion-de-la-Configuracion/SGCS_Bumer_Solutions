@@ -1495,8 +1495,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CambioController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\EntregableController.cs" />
+    <Compile Include="Controllers\EtapaController.cs" />
     <Compile Include="Controllers\MetodologiaController.cs" />
+    <Compile Include="Controllers\ProyectoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1637,6 +1641,8 @@
     <Content Include="Source\plugins\toastr\toastr.js.map" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Usuario\Usuario.cshtml" />
+    <Content Include="Views\Metodologia\Index.cshtml" />
+    <Content Include="Views\Etapa\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1647,7 +1653,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Source\plugins\jstree\themes\default\" />
-    <Folder Include="Views\Metodologia\" />
+    <Folder Include="Views\Cambio\" />
+    <Folder Include="Views\Entregable\" />
+    <Folder Include="Views\Proyecto\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
