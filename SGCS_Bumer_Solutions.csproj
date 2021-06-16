@@ -1143,6 +1143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CalendarioController.cs" />
     <Compile Include="Controllers\CambioController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EntregableController.cs" />
@@ -1215,6 +1216,7 @@
     <Content Include="Source\plugins\select2\src\scss\_multiple.scss" />
     <Content Include="Source\plugins\select2\src\scss\_single.scss" />
     <Content Include="Source\plugins\toastr\toastr.js.map" />
+    <Content Include="Views\Calendario\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

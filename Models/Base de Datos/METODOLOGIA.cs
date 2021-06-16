@@ -43,9 +43,7 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
                     metodologia = db.METODOLOGIA.ToList();
                 }
             }
-#pragma warning disable CS0168 // La variable 'e' se ha declarado pero nunca se usa
             catch (Exception e)
-#pragma warning restore CS0168 // La variable 'e' se ha declarado pero nunca se usa
             {
                 throw;
             }
@@ -70,9 +68,7 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
                     db.SaveChanges();
                 }
             }
-#pragma warning disable CS0168 // La variable 'e' se ha declarado pero nunca se usa
             catch (Exception e)
-#pragma warning restore CS0168 // La variable 'e' se ha declarado pero nunca se usa
             {
                 throw;
             }

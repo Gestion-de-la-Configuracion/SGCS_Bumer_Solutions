@@ -79,3 +79,4 @@ D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Sol
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.csproj.CopyComplete
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.pdb
+D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.csprojAssemblyReference.cache

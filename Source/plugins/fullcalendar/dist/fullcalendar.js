@@ -7526,7 +7526,7 @@ var View = fc.View = Class.extend({
 var Calendar = fc.Calendar = Class.extend({
 
 	dirDefaults: null, // option defaults related to LTR or RTL
-	langDefaults: null, // option defaults related to current locale
+	langDefaults: spanish, // option defaults related to current locale
 	overrides: null, // option overrides given to the fullCalendar constructor
 	options: null, // all defaults combined with overrides
 	viewSpecCache: null, // cache of view definitions

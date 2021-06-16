@@ -139,44 +139,20 @@
         var form = '';
         var today = new Date($.now());
 
-        var nombrehtml = location.pathname.split("/").slice(-2);
-
-        if (nombrehtml.includes("Administrador")) {
-            //LOGICA DE LISTAR LOS HORARIOS
-            var horariofinal = document.getElementById("horariosfinal").innerHTML;
-
-            //original
-            var defaultEvents = [{
-                title: 'admin Rutina de brazos',
-                start: new Date($.now() + 158000000),
-                className: 'bg-purple'
-            }, {
-                title: 'admin Yoga',
-                start: today,
-                end: today,
-                className: 'bg-danger'
-            }, {
-                title: 'admin Merienda',
-                start: new Date($.now() + 338000000),
-                className: 'bg-primary'
-            }];
-
-        } else {
-            var defaultEvents = [{
-                title: 'Rutina de brazos',
-                start: new Date($.now() + 158000000),
-                className: 'bg-purple'
-            }, {
-                title: 'Yoga',
-                start: today,
-                end: today,
-                className: 'bg-danger'
-            }, {
-                title: 'Merienda',
-                start: new Date($.now() + 338000000),
-                className: 'bg-primary'
-            }];
-        }        
+        var defaultEvents = [{
+            title: 'Rutina de brazasdasdos',
+            start: new Date($.now() + 158000000),
+            className: 'bg-purple'
+        }, {
+            title: 'Yoga',
+            start: today,
+            end: today,
+            className: 'bg-danger'
+        }, {
+            title: 'Merienda',
+            start: new Date($.now() + 338000000),
+            className: 'bg-primary'
+        }];      
 
         var $this = this;
         $this.$calendarObj = $this.$calendar.fullCalendar({
