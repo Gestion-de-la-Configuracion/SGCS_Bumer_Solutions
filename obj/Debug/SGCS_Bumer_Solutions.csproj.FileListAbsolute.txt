@@ -50,6 +50,8 @@ D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\roslyn\vbc.exe.confi
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\roslyn\vbc.rsp
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\roslyn\VBCSCompiler.exe
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\roslyn\VBCSCompiler.exe.config
+D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\EntityFramework.dll
+D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\EntityFramework.SqlServer.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\Microsoft.Web.Infrastructure.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\System.Web.Helpers.dll
@@ -58,6 +60,8 @@ D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\System.Web.Razor.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\System.Web.Webpages.Deployment.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\System.Web.Webpages.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\System.Web.Webpages.Razor.dll
+D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\EntityFramework.xml
+D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\EntityFramework.SqlServer.xml
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\System.Web.Razor.xml
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\System.Web.Webpages.xml
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\System.Web.Webpages.Deployment.xml
@@ -76,7 +80,3 @@ D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Sol
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.csproj.CopyComplete
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.dll
 D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\obj\Debug\SGCS_Bumer_Solutions.pdb
-D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\EntityFramework.dll
-D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\EntityFramework.SqlServer.dll
-D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\EntityFramework.xml
-D:\99. Gestion de la configuracion\SGCS_Bumer_Solutions\bin\EntityFramework.SqlServer.xml

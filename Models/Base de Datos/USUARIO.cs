@@ -1,5 +1,6 @@
 namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
 {
+    using SGCS_Bumer_Solutions.Models.Extras;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -101,6 +102,58 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
             {
                 throw;
             }
+        }
+
+        public ResponseModel ValidarLogin(string Codigo, string Contraseña)
+        {
+            var rm = new ResponseModel();
+
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    var usuario = db.USUARIO.Where(x => x.CODIGO == Codigo)
+                        .Where(x => x.PASSWORD == Contraseña)
+                        .SingleOrDefault();
+
+                    if (usuario != null)
+                    {
+                        SessionHelper.AddUserToSession(usuario.ID_USUARIO.ToString());
+                        rm.SetResponse(true);
+                    }
+                    else
+                    {
+                        rm.SetResponse(false, "Usuario y/o Password incorrectos");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return rm;
+        }
+
+        public USUARIO ObtenerUsuario(int id)
+        {
+            var usuario = new USUARIO();
+
+            try
+            {
+                using (var db = new ModeloSGCS())
+                {
+                    usuario = db.USUARIO.Include("TIPO_USUARIO")
+                        .Where(x => x.ID_USUARIO == id)
+                        .SingleOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return usuario;
         }
 
 
