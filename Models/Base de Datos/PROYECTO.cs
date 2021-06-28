@@ -42,7 +42,6 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
 
         public virtual USUARIO USUARIO1 { get; set; }
 
-
         public List<PROYECTO> ListarTodo()
         {
             var proyecto = new List<PROYECTO>();
@@ -197,7 +196,5 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
                 throw;
             }
         }
-
-
     }
 }

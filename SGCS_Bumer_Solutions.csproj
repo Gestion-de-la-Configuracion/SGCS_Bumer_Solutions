@@ -185,6 +185,7 @@
     <Content Include="Source\js\bootstrap.min.js" />
     <Content Include="Source\js\detect.js" />
     <Content Include="Source\js\fastclick.js" />
+    <Content Include="Source\js\Indices.js" />
     <Content Include="Source\js\jquery.app.js" />
     <Content Include="Source\js\jquery.blockUI.js" />
     <Content Include="Source\js\jquery.core.js" />
@@ -309,6 +310,10 @@
     <Content Include="Source\plugins\bootstrap-maxlength\bootstrap-maxlength.js" />
     <Content Include="Source\plugins\bootstrap-maxlength\bootstrap-maxlength.min.js" />
     <Content Include="Source\plugins\bootstrap-maxlength\src\bootstrap-maxlength.js" />
+    <Content Include="Source\plugins\bootstrap-sweetalert\sweet-alert.css" />
+    <Content Include="Source\plugins\bootstrap-sweetalert\sweet-alert.js" />
+    <Content Include="Source\plugins\bootstrap-sweetalert\sweet-alert.min.js" />
+    <Content Include="Source\plugins\bootstrap-sweetalert\thumbs-up.jpg" />
     <Content Include="Source\plugins\bootstrap-tagsinput\css\bootstrap-tagsinput.css" />
     <Content Include="Source\plugins\bootstrap-tagsinput\dist\bootstrap-tagsinput-angular.js" />
     <Content Include="Source\plugins\bootstrap-tagsinput\dist\bootstrap-tagsinput-angular.min.js" />
@@ -1147,6 +1152,7 @@
     <Compile Include="Controllers\CambioController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EntregableController.cs" />
+    <Compile Include="Controllers\EquipoController.cs" />
     <Compile Include="Controllers\EtapaController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MetodologiaController.cs" />
@@ -1221,6 +1227,7 @@
     <Content Include="Views\Metodologia\EditMet.cshtml" />
     <Content Include="Views\Etapa\EditEta.cshtml" />
     <Content Include="Views\Proyecto\EditPro.cshtml" />
+    <Content Include="Views\Equipo\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

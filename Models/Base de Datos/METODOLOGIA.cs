@@ -100,7 +100,7 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
             var metodologia = ObtenerMetodologia(ID_METODOLOGIA);
             this.ID_METODOLOGIA = metodologia.ID_METODOLOGIA;
             this.DESCRIPCION = metodologia.DESCRIPCION;
-            this.ESTADO = true;
+            this.ESTADO = false;
             try
             {
                 using (var db = new ModeloSGCS())

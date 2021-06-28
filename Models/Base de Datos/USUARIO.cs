@@ -58,7 +58,6 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
 
         public virtual TIPO_USUARIO TIPO_USUARIO { get; set; }
 
-
         public List<USUARIO> ListarTodo()
         {
             var usuarios = new List<USUARIO>();
@@ -215,7 +214,5 @@ namespace SGCS_Bumer_Solutions.Models.Base_de_Datos
                 throw;
             }
         }
-
-
     }
 }
